@@ -1,0 +1,52 @@
+.h_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.h_image {
+  width: 8rem;
+  margin: auto;
+}
+
+.h_right {
+  display: flex;
+  gap: 1rem;
+}
+
+/* xs */
+/* @media (min-width: 475px) {}
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* med */
+@media (min-width: 768px) {
+  .h_container {
+    width: 90%;
+  }
+
+  .h_image {
+    width: 10rem;
+    margin: auto;
+  }
+
+  .h_container {
+    margin-top: 1rem;
+  }
+}
+
+/* large */
+@media (min-width: 1024px) {
+  .h_container {
+    margin-top: 1.5rem;
+  }
+}
+
+/* xl */
+/* @media (min-width: 1280px) {} */
+
+/* xxl */
+/* @media (min-width: 1536px) {}  */
