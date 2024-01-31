@@ -13,7 +13,7 @@ import {
 } from "@mantine/core"
 import { truncate } from "lodash"
 import moment from "moment"
-import "./WalletDetails.css"
+import "./walletDetails.css"
 
 const WalletDetails = () => {
   const { id } = useParams()
