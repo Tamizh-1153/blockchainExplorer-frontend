@@ -5,7 +5,6 @@ import TransactionDetails from '../../components/transactionDetails/TransactionD
 const TransactionPage = () => {
   return (
     <>
-    <Header />
     <TransactionDetails />
     </>
   )

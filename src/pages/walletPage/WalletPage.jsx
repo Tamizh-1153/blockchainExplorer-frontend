@@ -5,7 +5,6 @@ import WalletDetails from '../../components/walletDetails/WalletDetails'
 const WalletPage = () => {
   return (
     <>
-    <Header />
     <WalletDetails />
     </>
   )

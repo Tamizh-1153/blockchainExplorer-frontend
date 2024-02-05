@@ -40,7 +40,7 @@ const AccountMenu = ({ user }) => {
         <MenuLabel>Account</MenuLabel>
         <MenuItem
           onClick={() => {
-            refresh("/add_recipe")
+            refresh("/user/addAddress")
           }}
         >
           My wallet

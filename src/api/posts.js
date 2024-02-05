@@ -62,7 +62,6 @@ export const resetPassword = async ({ id, token, password }) => {
 }
 
 export const getWalletDetails = async (address) => {
-
   try {
     const res = await api.get(`/blockchain/address/${address}`)
     return res.data
@@ -74,6 +73,25 @@ export const getWalletDetails = async (address) => {
 export const getTransactionByHash = async (hash) => {
   try {
     const res = await api.get(`/blockchain/hash/${hash}`)
+    console.log(res.data)
+    return res.data
+  } catch (error) {
+    console.log(error.message)
+  }
+}
+
+export const addAddress = async (address) => {
+  console.log(address)
+  try {
+    const res = await api.post(
+      `/user/addAddress`,
+      { address },
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }
+    )
     console.log(res.data)
     return res.data
   } catch (error) {

@@ -3,6 +3,7 @@ import React from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { getWalletDetails } from "../../api/posts"
 import {
+  Center,
   Flex,
   Table,
   TableTbody,
@@ -26,7 +27,11 @@ const WalletDetails = () => {
   console.log(data, isLoading, isError)
 
   if (isLoading) {
-    return <div>Loading...</div>
+    return (
+      <Center mt={100}>
+        <h4>Loading...</h4>
+      </Center>
+    )
   }
 
   return (

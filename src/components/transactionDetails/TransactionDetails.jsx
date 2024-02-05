@@ -1,23 +1,27 @@
-import { useQuery } from '@tanstack/react-query';
-import React from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
-import { getTransactionByHash } from '../../api/posts';
-import { Flex } from '@mantine/core';
-import moment from 'moment';
-import './transactionDetails.css'
+import { useQuery } from "@tanstack/react-query"
+import React from "react"
+import { useNavigate, useParams } from "react-router-dom"
+import { getTransactionByHash } from "../../api/posts"
+import { Center, Flex } from "@mantine/core"
+import moment from "moment"
+import "./transactionDetails.css"
 
 const TransactionDetails = () => {
-    const {id} = useParams()
-    const refresh = useNavigate()
+  const { id } = useParams()
+  const refresh = useNavigate()
 
-    const {data,isLoading,isError} = useQuery({
-        queryKey:[id],
-        queryFn:()=>getTransactionByHash(id)
-    })
-    console.log(data);
-    if(isLoading) {
-        <div>Loading...</div>
-    }
+  const { data, isLoading, isError } = useQuery({
+    queryKey: [id],
+    queryFn: () => getTransactionByHash(id),
+  })
+  console.log(data,isLoading,isError)
+  if (isLoading) {
+    return (
+      <Center mt={100}>
+        <h4>Loading...</h4>
+      </Center>
+    )
+  }
   return (
     <div className="hash_container">
       <h4>Overview</h4>
